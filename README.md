@@ -47,7 +47,7 @@ and start with any of them:
   [the built-in `SendMessage` function](https://api.slack.com/future/functions#send-message)
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using
   [the built-in `OpenForm` function](https://api.slack.com/future/functions#open-a-form)
-- [Custom Funtions](./Custom_Functions/): Do anything you want by writing
+- [Custom Functions](./Custom_Functions/): Do anything you want by writing
   TypeScript code
 - [External API Calls](./External_API_Calls/): Call other service's APIs in your
   custom function

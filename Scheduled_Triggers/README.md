@@ -6,7 +6,7 @@ scheduled trigger can invoke a workflow periodically or only once. The supported
 intervals as of this writing are "once", "hourly", "daily", "weekly", "monthly",
 and "yearly".
 
-If you haven't set up Slack CLI and the project on your local machine yet, visit
+If you haven't set up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -22,7 +22,7 @@ following command:
 $ slack trigger create --trigger-def ./Scheduled_Triggers/triggers/scheduled_only_once.ts
 ```
 
-After selecting a Workspace, the trgger should be created successfully.
+After selecting a Workspace, the trigger should be created successfully.
 
 The sample workflow will be invoked in 5 seconds, but it actually does nothing.
 To confirm that the workflow is invoked for sure, run the following command to
@@ -84,8 +84,8 @@ such as a user pressing a button or when a specific event occurs.
 ## What's Next?
 
 The `do_nothing` workflow does nothing as its name implies. To learn how to
-build more meaningful workflows, please check the following sample workflow. The
-workflow can be invoked ever day to maintain some data.
+build more meaningful workflows, please check out the following sample workflows. The
+workflows can be invoked every day to maintain some data.
 
 - https://github.com/slack-samples/deno-message-translator/blob/main/triggers/daily_maintenance_job.ts
 - https://github.com/slack-samples/deno-message-translator/blob/main/workflows/maintenance_job.ts

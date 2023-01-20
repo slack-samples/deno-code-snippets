@@ -2,7 +2,7 @@
 
 This sub-app guides you on how to post a channel message via
 [the built-in `SendMessage` function](https://api.slack.com/future/functions#send-message).
-If you haven't set up Slack CLI and the project on your local machine yet, visit
+If you haven't set up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -20,7 +20,8 @@ When you run `./Messaging/workflows/channel_message.ts` workflow, it sends a
 "Hello World!" message in a public channel. All you need to do are:
 
 1. Create a trigger to start the workflow
-1. Invoke the workflow via the created trigger
+2. Run your application using `slack run`
+3. Invoke the workflow via the created trigger
 
 ### Create Triggers
 
@@ -62,7 +63,7 @@ After selecting a Workspace, the output provided will include the link trigger
 Shortcut URL. Copy and paste this URL into a channel as a message, or add it as
 a bookmark in a channel of the workspace you selected.
 
-Running `slack triggers create` command automatically installs your app with the
+Running `slack trigger create` command automatically installs your app with the
 latest manifest metadata. Thus, your workflow is now ready to invoke. Once you
 run the workflow, you will see "Hello World!" message in the same channel :tada:
 

@@ -24,7 +24,7 @@ command:
 $ slack trigger create --trigger-def ./Event_Triggers/triggers/channel_created.ts
 ```
 
-To verify the behavior, create a new public channel. This workflow will be
+To verify the behavior, create a new public channel. If the app is running, this workflow will be
 invoked and its bot user will post a message mentioning you in the created
 channel :tada:
 
@@ -34,7 +34,7 @@ This example workflow can be invoked when a reaction is added to a message in
 the associated channels.
 
 To create an event trigger for the workflow in this template, run the following
-command.
+command:
 
 Before running the command, open the `Event_Triggers/triggers/reaction_added.ts`
 source file, and then **edit the part `channel_ids: ["C03E94MKS"],` with valid

@@ -10,7 +10,7 @@ const trigger: Trigger<typeof workflow.definition> = {
   name: "Schedule Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   schedule: {
-    // This start_time means 5 seconds after you run `slack triggers create` command
+    // This start_time means 5 seconds after you run `slack trigger create` command
     start_time: new Date(new Date().getTime() + 5_000).toISOString(),
     frequency: { type: "once" },
   },

@@ -1,18 +1,18 @@
 # Custom Functions
 
 This sub-app guides you on adding your custom function. If you haven't set up
-Slack CLI and the project on your local machine yet, visit
+the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 
-- **MySendMessage Workflow:** Perform chat.postMessage API calls in a custom
+- **MySendMessage Workflow:** Perform `chat.postMessage` API calls in a custom
   function
 
 ## MySendMessage Workflow
 
 In this example workflow, you will implement your own `SendMessage` function,
-which calls chat.postMessage API.
+which calls the `chat.postMessage` API.
 
 ### Create a Link Trigger
 

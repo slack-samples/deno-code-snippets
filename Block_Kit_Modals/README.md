@@ -1,7 +1,7 @@
 # Block Kit Modals
 
 This sub-app guides you on how to use Block Kit modals in your custom function.
-If you haven't set up Slack CLI and the project on your local machine yet, visit
+If you haven't set up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -72,7 +72,7 @@ modal dialog for you.
 
 When it's successful, you will see a modal dialog that consists of two pages.
 The first page has a input length validation. You can do the same as long as
-your ViewSubmissionHandler can respond within 3 seconds.
+your `ViewSubmissionHandler` can respond within 3 seconds.
 
 ## Deploying Your App
 

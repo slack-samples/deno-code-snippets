@@ -70,7 +70,7 @@ To stop running locally, press `<CTRL> + C` to end the process.
 Once you click the link trigger in a channel, the trigger starts the
 `Datastores/workflow/form_demo.ts` workflow, which runs the
 `Datastores/functions/tasks_demo.ts` function, which performs various datastore
-API calls.
+API calls and outputs it in the console.
 
 ## Run Queries via Slack CLI
 

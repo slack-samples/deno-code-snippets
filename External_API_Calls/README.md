@@ -141,7 +141,7 @@ such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 
-The following sample apps do external API calls.
+If you'd like to explore this concept more, the following sample apps also do external API calls.
 
 - https://github.com/slack-samples/deno-github-functions
 - https://github.com/slack-samples/deno-message-translator

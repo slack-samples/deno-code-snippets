@@ -1,7 +1,7 @@
 # Button Interactions
 
-This sub-app guides you on how to handle button interactions in a cannel
-message. If you haven't set up Slack CLI and the project on your local machine
+This sub-app guides you on how to handle button interactions in a channel
+message. If you haven't set up the Slack CLI and the project on your local machine
 yet, visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -78,7 +78,7 @@ function will be executed.
 
 You can handle the click event data. However, it's not feasible to customize the
 message UI with `SendMessage`'s `interactive_blocks`. When you need to go
-further, you can directly use Block Kit in your chat.postMessage API payload.
+further, you can directly use Block Kit in your `chat.postMessage` API payload.
 
 ## Block Kit Button Demo Workflow
 

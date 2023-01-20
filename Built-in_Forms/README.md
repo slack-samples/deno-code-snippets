@@ -1,7 +1,7 @@
-# Builtin Forms
+# Built-in Forms
 
 This sub-app guides you on how to use the buit-in modal form. If you haven't set
-up Slack CLI and the project on your local machine yet, visit
+up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
