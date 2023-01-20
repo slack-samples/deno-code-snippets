@@ -1,8 +1,8 @@
 # External API Calls
 
 This sub-app guides you on calling an external API in your custom function. If
-you haven't set up Slack CLI and the project on your local machine yet, visit
-[the top-level guide document](../README.md) first.
+you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 
@@ -141,7 +141,8 @@ such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 
-If you'd like to explore this concept more, the following sample apps also do external API calls.
+If you'd like to explore this concept more, the following sample apps also do
+external API calls.
 
 - https://github.com/slack-samples/deno-github-functions
 - https://github.com/slack-samples/deno-message-translator

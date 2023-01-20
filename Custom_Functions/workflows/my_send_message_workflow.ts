@@ -1,4 +1,5 @@
 import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
+import { def as MySendMessage } from "../functions/my_send_message.ts";
 
 const workflow = DefineWorkflow({
   callback_id: "my-send-message-workflow",
@@ -13,8 +14,6 @@ const workflow = DefineWorkflow({
     required: ["channel_id"],
   },
 });
-
-import { def as MySendMessage } from "../functions/my_send_message.ts";
 
 workflow.addStep(MySendMessage, {
   channel_id: workflow.inputs.channel_id,

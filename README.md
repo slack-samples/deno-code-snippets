@@ -8,7 +8,7 @@ simple form. Refer to each sub app's README for more details.
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
   - [Clone the Template](#clone-the-template)
-- [Sample Apps](#sample-apps)
+  - [Sample Apps](#sample-apps)
 - [Resources](#resources)
 
 ---

@@ -1,4 +1,5 @@
 import { DefineWorkflow } from "deno-slack-sdk/mod.ts";
+import { def as TasksDemo } from "../functions/tasks_demo.ts";
 
 const workflow = DefineWorkflow({
   callback_id: "datastore-demo-workflow",
@@ -6,7 +7,6 @@ const workflow = DefineWorkflow({
   input_parameters: { properties: {}, required: [] },
 });
 
-import { def as TasksDemo } from "../functions/tasks_demo.ts";
 workflow.addStep(TasksDemo, {});
 
 export default workflow;

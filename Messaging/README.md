@@ -2,8 +2,8 @@
 
 This sub-app guides you on how to post a channel message via
 [the built-in `SendMessage` function](https://api.slack.com/future/functions#send-message).
-If you haven't set up the Slack CLI and the project on your local machine yet, visit
-[the top-level guide document](../README.md) first.
+If you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 

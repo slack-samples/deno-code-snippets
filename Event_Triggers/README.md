@@ -2,7 +2,7 @@
 
 This sub-app guides you on how to use
 [event triggers](https://api.slack.com/future/triggers/event). If you haven't
-set up Slack CLI and the project on your local machine yet, visit
+set up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -24,23 +24,24 @@ command:
 $ slack trigger create --trigger-def ./Event_Triggers/triggers/channel_created.ts
 ```
 
-To verify the behavior, create a new public channel. If the app is running, this workflow will be
-invoked and its bot user will post a message mentioning you in the created
-channel :tada:
+To verify the behavior, create a new public channel. If the app is running, this
+workflow will be invoked and its bot user will post a message mentioning you in
+the created channel :tada:
 
 ## Reply To Reaction Workflow
 
 This example workflow can be invoked when a reaction is added to a message in
 the associated channels.
 
+Before creating a trigger as usual, open the
+`Event_Triggers/triggers/reaction_added.ts` source file, and then **edit the
+part `channel_ids: ["C03E94MKS"],` with valid channel IDs in your workspace**.
+The easiest way to know a channel ID is to click a channel name in the Slack
+client UI, scroll down to the bottom in the popup modal, and then copy the
+string starting with a "C" letter.
+
 To create an event trigger for the workflow in this template, run the following
 command:
-
-Before running the command, open the `Event_Triggers/triggers/reaction_added.ts`
-source file, and then **edit the part `channel_ids: ["C03E94MKS"],` with valid
-channel IDs in your workspace**. The easiest way to know a channel ID is to
-click a channel name in the Slack client UI, scroll down to the bottom in the
-popup modal, and then copy the string starting with a "C" letter.
 
 ```zsh
 $ slack trigger create --trigger-def ./Event_Triggers/triggers/reaction_added.ts

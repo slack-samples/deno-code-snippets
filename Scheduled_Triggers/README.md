@@ -6,8 +6,8 @@ scheduled trigger can invoke a workflow periodically or only once. The supported
 intervals as of this writing are "once", "hourly", "daily", "weekly", "monthly",
 and "yearly".
 
-If you haven't set up the Slack CLI and the project on your local machine yet, visit
-[the top-level guide document](../README.md) first.
+If you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 
@@ -84,8 +84,8 @@ such as a user pressing a button or when a specific event occurs.
 ## What's Next?
 
 The `do_nothing` workflow does nothing as its name implies. To learn how to
-build more meaningful workflows, please check out the following sample workflows. The
-workflows can be invoked every day to maintain some data.
+build more meaningful workflows, please check out the following sample
+workflows. The workflows can be invoked every day to maintain some data.
 
 - https://github.com/slack-samples/deno-message-translator/blob/main/triggers/daily_maintenance_job.ts
 - https://github.com/slack-samples/deno-message-translator/blob/main/workflows/maintenance_job.ts

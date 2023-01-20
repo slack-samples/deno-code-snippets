@@ -1,8 +1,8 @@
 # Block Kit Modals
 
 This sub-app guides you on how to use Block Kit modals in your custom function.
-If you haven't set up the Slack CLI and the project on your local machine yet, visit
-[the top-level guide document](../README.md) first.
+If you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 

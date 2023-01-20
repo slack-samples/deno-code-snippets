@@ -1,7 +1,7 @@
 # Datastores
 
 This sub-app guides you on how to use
-[datastores](https://api.slack.com/future/datastores). If you haven't set up
+[datastores](https://api.slack.com/future/datastores). If you haven't set up the
 Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
