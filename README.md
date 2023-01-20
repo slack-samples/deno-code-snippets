@@ -8,7 +8,7 @@ simple form. Refer to each sub app's README for more details.
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
   - [Clone the Template](#clone-the-template)
-  - [Sample Apps](#sample-apps)
+- [Sample Apps](#sample-apps)
 - [Resources](#resources)
 
 ---
@@ -38,7 +38,7 @@ $ slack create my-kitchen-sink-app -t slack-samples/deno-kitchen-sink-app
 $ cd my-kitchen-sink-app
 ```
 
-### Sample Apps
+## Sample Apps
 
 This app consists of a number of sample apps. Go over the list of sub-apps below
 and start with any of them:
