@@ -48,10 +48,10 @@ and start with any of them:
   [`SendEphemeralMessage`](https://api.slack.com/future/functions#send-ephemeral-message),
   and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
   functions
-- [Built-in Forms](./Built-in_Forms/): Open a modal dialog using
-  [the built-in `OpenForm` function](https://api.slack.com/future/functions#open-a-form)
-- [Custom Functions](./Custom_Functions/): Do anything you want by writing
-  TypeScript code
+- [Built-in Forms](./Built-in_Forms/): Open a modal dialog using the built-in
+  [`OpenForm`](https://api.slack.com/future/functions#open-a-form)
+- [Custom Functions](./Custom_Functions/) function: Do anything you want by
+  writing TypeScript code
 - [External API Calls](./External_API_Calls/): Call other service's APIs in your
   custom function
 - [Datastores](./Datastores/): Use datastores to store your app's data
