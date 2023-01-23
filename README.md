@@ -43,8 +43,11 @@ $ cd my-kitchen-sink-app
 This app consists of a number of sample apps. Go over the list of sub-apps below
 and start with any of them:
 
-- [Messaging](./Messaging/): Post a channel message via
-  [the built-in `SendMessage` function](https://api.slack.com/future/functions#send-message)
+- [Messaging](./Messaging/): Post a channel message via the built-in
+  [`SendMessage`](https://api.slack.com/future/functions#send-message),
+  [`SendEphemeralMessage`](https://api.slack.com/future/functions#send-ephemeral-message),
+  and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
+  functions
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using
   [the built-in `OpenForm` function](https://api.slack.com/future/functions#open-a-form)
 - [Custom Functions](./Custom_Functions/): Do anything you want by writing
