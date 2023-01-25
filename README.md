@@ -1,4 +1,4 @@
-# Deno Kitchen Sink App
+# Deno Code Snippets
 
 This app demonstrates most of Slack's next-generation platform features in a
 simple form. Refer to each sub app's README for more details.
@@ -7,7 +7,7 @@ simple form. Refer to each sub app's README for more details.
 
 - [Setup](#setup)
   - [Install the Slack CLI](#install-the-slack-cli)
-  - [Clone the Template](#clone-the-template)
+  - [Clone the Sample App](#clone-the-sample-app)
 - [Sample Apps](#sample-apps)
 - [Resources](#resources)
 
@@ -26,16 +26,16 @@ To use this template, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
 [Quickstart Guide](https://api.slack.com/future/quickstart).
 
-### Clone the Template
+### Clone the Sample App
 
 Start by cloning this repository:
 
 ```zsh
 # Clone this project onto your machine
-$ slack create my-kitchen-sink-app -t slack-samples/deno-kitchen-sink-app
+$ slack create my-code-snippets-app -t slack-samples/deno-code-snippets
 
 # Change into this project directory
-$ cd my-kitchen-sink-app
+$ cd my-code-snippets-app
 ```
 
 ## Sample Apps
