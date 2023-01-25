@@ -38,7 +38,7 @@ import BlockKitModalDemoWorkflow from "./Block_Kit_Modals/workflows/block_kit_mo
  * https://api.slack.com/future/manifest
  */
 export default Manifest({
-  name: "deno-kitchen-sink-app",
+  name: "deno-code-snippets",
   description: "A collection of Slack's next-gen platform feature demos",
   icon: "assets/default_new_app_icon.png",
   workflows: [
