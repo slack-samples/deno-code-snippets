@@ -1,4 +1,4 @@
-import { Trigger } from "deno-slack-api/types.ts";
+import { Trigger } from "deno-slack-sdk/types.ts";
 import workflow from "../workflows/message_to_channel_creator.ts";
 
 const trigger: Trigger<typeof workflow.definition> = {
