@@ -15,9 +15,11 @@ const workflow = DefineWorkflow({
   },
 });
 
-workflow.addStep(Schema.slack.functions.SendMessage, {
-  channel_id: workflow.inputs.channel_id,
-  thread_ts: workflow.inputs.message_ts,
+workflow.addStep(Schema.slack.functions.ReplyInThread, {
+  message_context: {
+    channel_id: workflow.inputs.channel_id,
+    message_ts: workflow.inputs.message_ts,
+  },
   message:
     `Hey <@${workflow.inputs.user_id}>, thanks for adding :${workflow.inputs.reaction}:!`,
 });
