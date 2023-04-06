@@ -49,7 +49,7 @@ workflow.addStep(HandleInteractiveBlocks, {
   // The message's URL
   messageLink: sendMessageStep.outputs.message_link,
   // The message's unique ID in the channel
-  messageTs: sendMessageStep.outputs.message_ts,
+  messageTs: sendMessageStep.outputs.message_context.message_ts,
 });
 
 export default workflow;
