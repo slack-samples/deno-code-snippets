@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/direct_message.ts";
 
 /**
@@ -6,12 +7,12 @@ import workflow from "../workflows/direct_message.ts";
  * Learn more at https://api.slack.com/future/triggers/link
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "Direct Messaging Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   inputs: {
     // The user ID who clicks the link trigger
-    user_id: { value: "{{data.user_id}}" },
+    user_id: { value: TriggerContextData.Shortcut.user_id },
   },
 };
 

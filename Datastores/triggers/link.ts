@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/task_manager.ts";
 
 /**
@@ -6,7 +7,7 @@ import workflow from "../workflows/task_manager.ts";
  * Learn more at https://api.slack.com/future/triggers/link
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "Datastore Demo Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   inputs: {},
