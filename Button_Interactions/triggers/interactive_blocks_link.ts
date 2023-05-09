@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/interactive_blocks_demo.ts";
 
 /**
@@ -6,12 +7,12 @@ import workflow from "../workflows/interactive_blocks_demo.ts";
  * Learn more at https://api.slack.com/future/triggers/link
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "Interactive Blocks Demo Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   inputs: {
-    channel_id: { value: "{{data.channel_id}}" },
-    user_id: { value: "{{data.user_id}}" },
+    channel_id: { value: TriggerContextData.Shortcut.channel_id },
+    user_id: { value: TriggerContextData.Shortcut.user_id },
   },
 };
 

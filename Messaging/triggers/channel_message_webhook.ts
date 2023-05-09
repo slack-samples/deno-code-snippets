@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/channel_message.ts";
 
 /**
@@ -6,11 +7,11 @@ import workflow from "../workflows/channel_message.ts";
  * Learn more at https://api.slack.com/future/triggers/webhook
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "webhook", // Incoming Webhooks
+  type: TriggerTypes.Webhook, // Incoming Webhooks
   name: "Channel Messaging Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   inputs: {
-    // The channel must be included in requset body data
+    // The channel must be included in request body data
     channel_id: { value: "{{data.channel_id}}" },
   },
 };

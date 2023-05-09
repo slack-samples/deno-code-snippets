@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/my_send_message_workflow.ts";
 
 /**
@@ -6,12 +7,12 @@ import workflow from "../workflows/my_send_message_workflow.ts";
  * Learn more at https://api.slack.com/future/triggers/link
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "shortcut",
+  type: TriggerTypes.Shortcut,
   name: "MySendMessage Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   inputs: {
     // The channel where you click the link trigger
-    channel_id: { value: "{{data.channel_id}}" },
+    channel_id: { value: TriggerContextData.Shortcut.channel_id },
   },
 };
 

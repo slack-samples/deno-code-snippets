@@ -1,4 +1,5 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import { TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/do_nothing.ts";
 
 /**
@@ -6,7 +7,7 @@ import workflow from "../workflows/do_nothing.ts";
  * Learn more at https://api.slack.com/future/triggers/scheduled
  */
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "scheduled",
+  type: TriggerTypes.Scheduled,
   name: "Schedule Workflow Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
   schedule: {

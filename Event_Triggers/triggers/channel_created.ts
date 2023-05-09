@@ -1,17 +1,26 @@
 import { Trigger } from "deno-slack-sdk/types.ts";
+import {
+  TriggerContextData,
+  TriggerEventTypes,
+  TriggerTypes,
+} from "deno-slack-api/mod.ts";
 import workflow from "../workflows/message_to_channel_creator.ts";
 
 const trigger: Trigger<typeof workflow.definition> = {
-  type: "event",
+  type: TriggerTypes.Event,
   name: "Channel Creation Trigger",
   workflow: `#/workflows/${workflow.definition.callback_id}`,
-  event: { event_type: "slack#/events/channel_created" },
+  event: { event_type: TriggerEventTypes.ChannelCreated },
   inputs: {
-    channel_id: { value: "{{data.channel_id}}" },
-    channel_name: { value: "{{data.channel_name}}" },
-    channel_type: { value: "{{data.channel_type}}" },
-    creator_id: { value: "{{data.creator_id}}" },
-    created: { value: "{{data.created}}" },
+    channel_id: { value: TriggerContextData.Event.ChannelCreated.channel_id },
+    channel_name: {
+      value: TriggerContextData.Event.ChannelCreated.channel_name,
+    },
+    channel_type: {
+      value: TriggerContextData.Event.ChannelCreated.channel_type,
+    },
+    creator_id: { value: TriggerContextData.Event.ChannelCreated.creator_id },
+    created: { value: TriggerContextData.Event.ChannelCreated.created },
   },
 };
 
