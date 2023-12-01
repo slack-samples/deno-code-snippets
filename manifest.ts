@@ -21,6 +21,7 @@ import Tasks from "./Datastores/datastores/tasks.ts";
 // Event_Triggers/*
 import MessageToChannelCreatorWorkflow from "./Event_Triggers/workflows/message_to_channel_creator.ts";
 import ReplyToReactionWorkflow from "./Event_Triggers/workflows/reply_to_reaction.ts";
+import PingPongMessageWorkflow from "./Event_Triggers/workflows/ping_pong_message.ts";
 
 // Scheduled Triggers/*
 import ScheduledWorkflow from "./Scheduled_Triggers/workflows/do_nothing.ts";
@@ -51,6 +52,7 @@ export default Manifest({
     TaskManagerWorkflow,
     MessageToChannelCreatorWorkflow,
     ReplyToReactionWorkflow,
+    PingPongMessageWorkflow,
     ScheduledWorkflow,
     InteractiveBlocksModalDemoWorkflow,
     BlockKitButtonDemoWorkflow,
@@ -68,6 +70,7 @@ export default Manifest({
     "chat:write.public",
     "channels:read", // for Event_Triggers's MessageToChannelCreatorWorkflow
     "reactions:read", // for Event_Triggers's ReplyToReactionWorkflow
+    "channels:history", // for Event_Triggers's PingPongMessageWorkflow
     "datastore:read", // for Datastores/*
     "datastore:write", // for Datastores/*
   ],
