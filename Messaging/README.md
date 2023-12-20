@@ -52,7 +52,7 @@ that Shortcut URLs will be different across each workspace, as well as between
 [locally run](#running-your-project-locally) and
 [deployed apps](#deploying-your-app). When creating a trigger, you must select
 the workspace that you'd like to create the trigger in. Each workspace has a
-development version (denoted by `(dev)`), as well as a deployed version.
+development version (denoted by `(local)`), as well as a deployed version.
 
 To create a link trigger for the workflow in this template, run the following
 command:
@@ -131,7 +131,7 @@ $ slack deploy
 ```
 
 After deploying, create a trigger for the production version of your app (not
-appended with `(dev)`). Once the trigger is invoked, the workflow should run
+appended with `(local)`). Once the trigger is invoked, the workflow should run
 just as it did when developing locally.
 
 ### Viewing Activity Logs

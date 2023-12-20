@@ -51,7 +51,7 @@ $ slack deploy
 ```
 
 After deploying, create a trigger for the production version of your app (not
-appended with `(dev)`). Once the trigger is invoked, the workflow should run
+appended with `(local)`). Once the trigger is invoked, the workflow should run
 just as it did when developing locally.
 
 ## Project Structure

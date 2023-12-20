@@ -31,7 +31,7 @@ that Shortcut URLs will be different across each workspace, as well as between
 [locally run](#running-your-project-locally) and
 [deployed apps](#deploying-your-app). When creating a trigger, you must select
 the workspace that you'd like to create the trigger in. Each workspace has a
-development version (denoted by `(dev)`), as well as a deployed version.
+development version (denoted by `(local)`), as well as a deployed version.
 
 To create a link trigger for the workflow in this template, run the following
 command:
@@ -50,7 +50,7 @@ a bookmark in a channel of the workspace you selected.
 
 While building your app, you can see your changes propagated to your workspace
 in real-time with `slack run`. In both the CLI and in Slack, you'll know an app
-is the development version if the name has the string `(dev)` appended.
+is the development version if the name has the string `(local)` appended.
 
 ```zsh
 # Run app locally
@@ -61,14 +61,14 @@ Connected, awaiting events
 
 Once running, click the
 [previously created Shortcut URL](#create-a-link-trigger) associated with the
-`(dev)` version of your app. This should start the included sample workflow.
+`(local)` version of your app. This should start the included sample workflow.
 
 To stop running locally, press `<CTRL> + C` to end the process.
 
 ## Manual Testing
 
 Once you click the link trigger in a channel, the trigger starts the
-`Built-in_Forms/workflow/form_demo.ts` workflow, which runs the built-in
+`Built-in_Forms/workflows/form_demo.ts` workflow, which runs the built-in
 `OpenForm` function.
 
 When it's successful, you will see a modal dialog with lots of input fields.
@@ -85,7 +85,7 @@ $ slack deploy
 ```
 
 After deploying, create a trigger for the production version of your app (not
-appended with `(dev)`). Once the trigger is invoked, the workflow should run
+appended with `(local)`). Once the trigger is invoked, the workflow should run
 just as it did when developing locally.
 
 ## Project Structure
