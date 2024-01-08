@@ -148,7 +148,7 @@ export default SlackFunction(
       console.log(`view_closed handler called: ${JSON.stringify(view)}`);
       await client.functions.completeSuccess({
         function_execution_id: body.function_data.execution_id,
-        outputs: {}
+        outputs: {},
       });
     },
   );
