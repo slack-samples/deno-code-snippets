@@ -55,7 +55,7 @@ mentioning you in the message's thread.
 
 While building your app, you can see your changes propagated to your workspace
 in real-time with `slack run`. In both the CLI and in Slack, you'll know an app
-is the development version if the name has the string `(dev)` appended.
+is the development version if the name has the string `(local)` appended.
 
 ```zsh
 # Run app locally
@@ -76,7 +76,7 @@ $ slack deploy
 ```
 
 After deploying, create a trigger for the production version of your app (not
-appended with `(dev)`). Once the trigger is invoked, the workflow should run
+appended with `(local)`). Once the trigger is invoked, the workflow should run
 just as it did when developing locally.
 
 ## Project Structure

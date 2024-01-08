@@ -8,6 +8,10 @@ import DirectMessageWorkflow from "./Messaging/workflows/direct_message.ts";
 // Built-in_Forms/*
 import FormDemoWorkflow from "./Built-in_Forms/workflows/form_demo.ts";
 
+// Connectors/*
+import GiphyConnectorWorkflow from "./Connectors/workflows/giphy.ts";
+import GoogleCalendarConnectorWorkflow from "./Connectors/workflows/google_calendar.ts";
+
 // Custom_Functions/*
 import MySendMessageWorflow from "./Custom_Functions/workflows/my_send_message_workflow.ts";
 
@@ -47,6 +51,8 @@ export default Manifest({
     EphemeralMessageWorkflow,
     DirectMessageWorkflow,
     FormDemoWorkflow,
+    GiphyConnectorWorkflow,
+    GoogleCalendarConnectorWorkflow,
     MySendMessageWorflow,
     HttpbinWorkflow,
     TaskManagerWorkflow,

@@ -50,6 +50,7 @@ and start with any of them:
   functions
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using the built-in
   [`OpenForm`](https://api.slack.com/future/functions#open-a-form)
+- [Connectors](./Connectors/): Use connector steps within your coded workflow
 - [Custom Functions](./Custom_Functions/) function: Do anything you want by
   writing TypeScript code
 - [External API Calls](./External_API_Calls/): Call other service's APIs in your
