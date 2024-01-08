@@ -144,8 +144,11 @@ export default SlackFunction(
   // ---------------------------
   .addViewClosedHandler(
     ["first-page", "second-page", "completion"],
-    ({ view }) => {
+    async ({ body, client, view }) => {
       console.log(`view_closed handler called: ${JSON.stringify(view)}`);
-      return { completed: true };
+      await client.functions.completeSuccess({
+        function_execution_id: body.function_data.execution_id,
+        outputs: {}
+      });
     },
   );
