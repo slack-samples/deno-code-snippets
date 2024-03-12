@@ -18,7 +18,6 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  *       messagesTabReadOnlyEnabled: false,
  *     },
  *   },
- * 
  * To learn more on workflows, read https://api.slack.com/future/workflows
  */
 const workflow = DefineWorkflow({

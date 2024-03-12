@@ -1,4 +1,3 @@
-
 import { Trigger } from "deno-slack-sdk/types.ts";
 import { TriggerContextData, TriggerTypes } from "deno-slack-api/mod.ts";
 import workflow from "../workflows/create_canvas.ts";

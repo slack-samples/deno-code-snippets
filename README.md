@@ -55,8 +55,6 @@ and start with any of them:
   [`CreateCanvas`](https://api.slack.com/reference/functions/canvas_create),
   [`CanvasUpdateContent`](https://api.slack.com/reference/functions/canvas_update_content),
   [`ShareCanvas`](https://api.slack.com/reference/functions/share_canvas),
-  and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
-  functions
 - [Connectors](./Connectors/): Use connector steps within your coded workflow
 - [Custom Functions](./Custom_Functions/) function: Do anything you want by
   writing TypeScript code

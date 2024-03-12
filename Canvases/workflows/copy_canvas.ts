@@ -2,8 +2,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
 
 /**
  * This workflow demonstrates how to create a canvas and copy it.
- * 
- *  Note: Copy canvas only work for enterprise grid workspaces
+ * Note: Copy canvas only work for enterprise grid workspaces
  *
  * To run the workflow, you need to have the following scopes in "botScopes" property in `manifest.ts` file:
  * - "canvases:read"
@@ -41,7 +40,7 @@ workflow.addStep(
   {
     canvas_id: createCanvasStep.outputs.canvas_id,
     title: "Copy of Hello world",
-    owner_id: workflow.inputs.user
+    owner_id: workflow.inputs.user,
   },
 );
 
