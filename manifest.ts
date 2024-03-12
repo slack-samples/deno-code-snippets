@@ -37,6 +37,12 @@ import BlockKitButtonDemoWorkflow from "./Button_Interactions/workflows/block_ki
 // Block_Kit_Modals/*
 import BlockKitModalDemoWorkflow from "./Block_Kit_Modals/workflows/block_kit_modal_demo.ts";
 
+// Canvas Triggers/*
+import CanvasCreateWorkflow from "./Canvases/workflows/create_canvas.ts";
+import CanvasUpdateWorkflow from "./Canvases/workflows/update_canvas.ts";
+import CanvasShareWorkflow from "./Canvases/workflows/share_canvas.ts";
+import CanvasCopyWorkflow from "./Canvases/workflows/copy_canvas.ts";
+
 /**
  * The app manifest contains the app's configuration. This
  * file defines attributes like app name and description.
@@ -63,6 +69,10 @@ export default Manifest({
     InteractiveBlocksModalDemoWorkflow,
     BlockKitButtonDemoWorkflow,
     BlockKitModalDemoWorkflow,
+    CanvasCreateWorkflow,
+    CanvasUpdateWorkflow,
+    CanvasShareWorkflow,
+    CanvasCopyWorkflow,
   ],
   outgoingDomains: [
     "httpbin.org", // for External_API_Calls/functions/*
@@ -70,14 +80,24 @@ export default Manifest({
   datastores: [
     Tasks, // for Datastores/*
   ],
+  features: {
+    appHome: {
+      messagesTabEnabled: true,
+      messagesTabReadOnlyEnabled: false,
+    },
+  },
   botScopes: [
     "commands",
     "chat:write",
     "chat:write.public",
+    "groups:write", // for Event_Triggers's ShareCanvasWorkflow
+    "im:write", // for Event_Triggers's ShareCanvasWorkflow
     "channels:read", // for Event_Triggers's MessageToChannelCreatorWorkflow
     "reactions:read", // for Event_Triggers's ReplyToReactionWorkflow
     "channels:history", // for Event_Triggers's PingPongMessageWorkflow
     "datastore:read", // for Datastores/*
     "datastore:write", // for Datastores/*
+    "canvases:read", // for Canvases/*
+    "canvases:write", // for Canvases/*
   ],
 });

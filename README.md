@@ -50,6 +50,13 @@ and start with any of them:
   functions
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using the built-in
   [`OpenForm`](https://api.slack.com/future/functions#open-a-form)
+- [Canvases](./Canvases/): Use canvas via the built-in
+  [`CopyCanvas`](https://api.slack.com/reference/functions/canvas_copy),
+  [`CreateCanvas`](https://api.slack.com/reference/functions/canvas_create),
+  [`CanvasUpdateContent`](https://api.slack.com/reference/functions/canvas_update_content),
+  [`ShareCanvas`](https://api.slack.com/reference/functions/share_canvas),
+  and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
+  functions
 - [Connectors](./Connectors/): Use connector steps within your coded workflow
 - [Custom Functions](./Custom_Functions/) function: Do anything you want by
   writing TypeScript code
