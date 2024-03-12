@@ -6,6 +6,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  * To run the workflow, you need to have the following scopes in "botScopes" property in `manifest.ts` file:
  * - "canvases:write"
  *
+ * Learn more about the update canvas content slack function: https://api.slack.com/reference/functions/canvas_update_content
  * To learn more on workflows, read https://api.slack.com/future/workflows
  */
 const workflow = DefineWorkflow({

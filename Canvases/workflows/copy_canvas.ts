@@ -8,6 +8,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  * - "canvases:read"
  * - "canvases:write"
  *
+ * Learn more about the copy canvas slack function: https://api.slack.com/reference/functions/canvas_copy
  * To learn more on workflows, read https://api.slack.com/future/workflows
  */
 const workflow = DefineWorkflow({
