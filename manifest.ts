@@ -20,7 +20,9 @@ import HttpbinWorkflow from "./External_API_Calls/workflows/ephemeral_message.ts
 
 // Datastores/*
 import TaskManagerWorkflow from "./Datastores/workflows/task_manager.ts";
+import PTOWorkflow from "./Datastores/workflows/pto.ts";
 import Tasks from "./Datastores/datastores/tasks.ts";
+import PTOs from "./Datastores/datastores/pto.ts";
 
 // Event_Triggers/*
 import MessageToChannelCreatorWorkflow from "./Event_Triggers/workflows/message_to_channel_creator.ts";
@@ -62,6 +64,7 @@ export default Manifest({
     MySendMessageWorflow,
     HttpbinWorkflow,
     TaskManagerWorkflow,
+    PTOWorkflow,
     MessageToChannelCreatorWorkflow,
     ReplyToReactionWorkflow,
     PingPongMessageWorkflow,
@@ -79,6 +82,7 @@ export default Manifest({
   ],
   datastores: [
     Tasks, // for Datastores/*
+    PTOs, // for Datastores/*
   ],
   features: {
     appHome: {
