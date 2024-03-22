@@ -3,9 +3,9 @@
 This sub-app guides you on how to post a channel message via the built-in
 [`SendMessage`](https://api.slack.com/reference/functions/send_message),
 [`SendEphemeralMessage`](https://api.slack.com/reference/functions/send_ephemeral_message),
-and [`SendDm`](https://api.slack.com/reference/functions/send_dm)
-functions. If you haven't set up the Slack CLI and the project on your local
-machine yet, visit [the top-level guide document](../README.md) first.
+and [`SendDm`](https://api.slack.com/reference/functions/send_dm) functions. If
+you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 

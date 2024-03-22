@@ -46,8 +46,7 @@ and start with any of them:
 - [Messaging](./Messaging/): Post a channel message via the built-in
   [`SendMessage`](https://api.slack.com/reference/functions/send_message),
   [`SendEphemeralMessage`](https://api.slack.com/reference/functions/send_ephemeral_message),
-  and [`SendDm`](https://api.slack.com/reference/functions/send_dm)
-  functions
+  and [`SendDm`](https://api.slack.com/reference/functions/send_dm) functions
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using the built-in
   [`OpenForm`](https://api.slack.com/reference/functions/open_form)
 - [Canvases](./Canvases/): Use canvas via the built-in
