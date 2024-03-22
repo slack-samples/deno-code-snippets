@@ -1,7 +1,7 @@
 # Scheduled Triggers
 
 This sub-app guides you on invoking a workflow using a
-[scheduled trigger](https://api.slack.com/future/triggers/scheduled). A
+[scheduled trigger](https://api.slack.com/automation/triggers/scheduled). A
 scheduled trigger can invoke a workflow periodically or only once. The supported
 intervals as of this writing are "once", "hourly", "daily", "weekly", "monthly",
 and "yearly".
@@ -58,7 +58,7 @@ just as it did when developing locally.
 
 ### `manifest.ts`
 
-The [app manifest](https://api.slack.com/future/manifest) contains the app's
+The [app manifest](https://api.slack.com/automation/manifest) contains the app's
 configuration. This file defines attributes like app name and description.
 
 ### `slack.json`
@@ -68,18 +68,18 @@ script hooks that are executed by the CLI and implemented by the SDK.
 
 ### `Scheduled_Triggers/workflows`
 
-A [workflow](https://api.slack.com/future/workflows) is a set of steps that are
-executed in order. Each step in a workflow is a function.
+A [workflow](https://api.slack.com/automation/workflows) is a set of steps that
+are executed in order. Each step in a workflow is a function.
 
 Workflows can be configured to run without user input, or they can collect
-inputs by beginning with a [form](https://api.slack.com/future/forms) before
+inputs by beginning with a [form](https://api.slack.com/automation/forms) before
 continuing to the next step.
 
 ### `Scheduled_Triggers/triggers`
 
-[Triggers](https://api.slack.com/future/triggers) determine when workflows are
-executed. A trigger file describes a scenario in which a workflow should be run,
-such as a user pressing a button or when a specific event occurs.
+[Triggers](https://api.slack.com/automation/triggers) determine when workflows
+are executed. A trigger file describes a scenario in which a workflow should be
+run, such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 

@@ -1,8 +1,8 @@
 # Event Triggers
 
 This sub-app guides you on how to use
-[event triggers](https://api.slack.com/future/triggers/event). If you haven't
-set up the Slack CLI and the project on your local machine yet, visit
+[event triggers](https://api.slack.com/automation/triggers/event). If you
+haven't set up the Slack CLI and the project on your local machine yet, visit
 [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
@@ -84,7 +84,7 @@ just as it did when developing locally.
 
 ### `manifest.ts`
 
-The [app manifest](https://api.slack.com/future/manifest) contains the app's
+The [app manifest](https://api.slack.com/automation/manifest) contains the app's
 configuration. This file defines attributes like app name and description.
 
 ### `slack.json`
@@ -94,18 +94,18 @@ script hooks that are executed by the CLI and implemented by the SDK.
 
 ### `Event_Triggers/workflows`
 
-A [workflow](https://api.slack.com/future/workflows) is a set of steps that are
-executed in order. Each step in a workflow is a function.
+A [workflow](https://api.slack.com/automation/workflows) is a set of steps that
+are executed in order. Each step in a workflow is a function.
 
 Workflows can be configured to run without user input, or they can collect
-inputs by beginning with a [form](https://api.slack.com/future/forms) before
+inputs by beginning with a [form](https://api.slack.com/automation/forms) before
 continuing to the next step.
 
 ### `Event_Triggers/triggers`
 
-[Triggers](https://api.slack.com/future/triggers) determine when workflows are
-executed. A trigger file describes a scenario in which a workflow should be run,
-such as a user pressing a button or when a specific event occurs.
+[Triggers](https://api.slack.com/automation/triggers) determine when workflows
+are executed. A trigger file describes a scenario in which a workflow should be
+run, such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 

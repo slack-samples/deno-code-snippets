@@ -1,11 +1,11 @@
 # Messaging
 
 This sub-app guides you on how to post a channel message via the built-in
-[`SendMessage`](https://api.slack.com/future/functions#send-message),
-[`SendEphemeralMessage`](https://api.slack.com/future/functions#send-ephemeral-message),
-and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
-functions. If you haven't set up the Slack CLI and the project on your local
-machine yet, visit [the top-level guide document](../README.md) first.
+[`SendMessage`](https://api.slack.com/reference/functions/send_message),
+[`SendEphemeralMessage`](https://api.slack.com/reference/functions/send_ephemeral_message),
+and [`SendDm`](https://api.slack.com/reference/functions/send_dm) functions. If
+you haven't set up the Slack CLI and the project on your local machine yet,
+visit [the top-level guide document](../README.md) first.
 
 ## Supported Workflows
 
@@ -27,9 +27,9 @@ When you run `./Messaging/workflows/channel_message.ts` workflow, it sends a
 
 ### Create Triggers
 
-[Triggers](https://api.slack.com/future/triggers) are what cause workflows to
-run. These triggers can be invoked by a user or automatically as a response to
-an event within Slack.
+[Triggers](https://api.slack.com/automation/triggers) are what cause workflows
+to run. These triggers can be invoked by a user or automatically as a response
+to an event within Slack.
 
 By running this workflow, you will learn how to create and use two types of
 triggers.
@@ -42,7 +42,7 @@ link trigger.
 
 #### Create a Link Trigger
 
-A [link trigger](https://api.slack.com/future/triggers/link) is a type of
+A [link trigger](https://api.slack.com/automation/triggers/link) is a type of
 trigger that generates a **Shortcut URL**, which, when posted in a channel or
 added as a bookmark, becomes a link. When clicked, the link trigger will run the
 associated workflow.
@@ -71,9 +71,9 @@ run the workflow, you will see "Hello World!" message in the same channel :tada:
 
 #### Create a Webhook Trigger
 
-A [webhook trigger](https://api.slack.com/future/triggers/webhook) is a type of
-a trigger that runs its associated workflow when a specific URL receives a POST
-request.
+A [webhook trigger](https://api.slack.com/automation/triggers/webhook) is a type
+of a trigger that runs its associated workflow when a specific URL receives a
+POST request.
 
 To create a webhook trigger for the workflow in this template, run the following
 command:
@@ -147,7 +147,7 @@ $ slack activity
 
 ### `manifest.ts`
 
-The [app manifest](https://api.slack.com/future/manifest) contains the app's
+The [app manifest](https://api.slack.com/automation/manifest) contains the app's
 configuration. This file defines attributes like app name and description.
 
 ### `slack.json`
@@ -157,18 +157,18 @@ script hooks that are executed by the CLI and implemented by the SDK.
 
 ### `Messaging/workflows`
 
-A [workflow](https://api.slack.com/future/workflows) is a set of steps that are
-executed in order. Each step in a workflow is a function.
+A [workflow](https://api.slack.com/automation/workflows) is a set of steps that
+are executed in order. Each step in a workflow is a function.
 
 Workflows can be configured to run without user input, or they can collect
-inputs by beginning with a [form](https://api.slack.com/future/forms) before
+inputs by beginning with a [form](https://api.slack.com/automation/forms) before
 continuing to the next step.
 
 ### `Messaging/triggers`
 
-[Triggers](https://api.slack.com/future/triggers) determine when workflows are
-executed. A trigger file describes a scenario in which a workflow should be run,
-such as a user pressing a button or when a specific event occurs.
+[Triggers](https://api.slack.com/automation/triggers) determine when workflows
+are executed. A trigger file describes a scenario in which a workflow should be
+run, such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 

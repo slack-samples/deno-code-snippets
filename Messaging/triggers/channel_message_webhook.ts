@@ -4,7 +4,7 @@ import workflow from "../workflows/channel_message.ts";
 
 /**
  * This trigger starts the workflow when an end-user clicks the link.
- * Learn more at https://api.slack.com/future/triggers/webhook
+ * Learn more at https://api.slack.com/automation/triggers/webhook
  */
 const trigger: Trigger<typeof workflow.definition> = {
   type: TriggerTypes.Webhook, // Incoming Webhooks

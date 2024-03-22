@@ -6,7 +6,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  * To run the workflow, you need to have the following scopes in "botScopes" property in `manifest.ts` file:
  * - "chat:write"
  *
- * To learn more on workflows, read https://api.slack.com/future/workflows
+ * To learn more on workflows, read https://api.slack.com/automation/workflows
  */
 const workflow = DefineWorkflow({
   callback_id: "direct-message-workflow",

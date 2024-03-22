@@ -1,6 +1,6 @@
 import { DefineDatastore, Schema } from "deno-slack-sdk/mod.ts";
 
-// Refer to https://api.slack.com/future/datastores for details
+// Refer to https://api.slack.com/automation/datastores for details
 const datastore = DefineDatastore({
   name: "tasks",
   // The primary key's type must be string
