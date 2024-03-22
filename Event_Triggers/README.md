@@ -11,6 +11,7 @@ haven't set up the Slack CLI and the project on your local machine yet, visit
   creator when a channel is created
 - **Reply To Reaction Workflow:** Rely in a message's thread when a reaction is
   added to a message
+- **Ping Pong Message Workflow:** Post a "pong" message when receiving a message
 
 ## Message To Channel Creator Workflow
 
