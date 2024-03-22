@@ -8,6 +8,7 @@ Slack CLI and the project on your local machine yet, visit
 ## Supported Workflows
 
 - **Task Manager Workflow:** Demonstrate how to interact with datastore records
+- **PTO Workflow:** Demonstrate how to use TTL for datastore records
 
 ## Task Manager Workflow
 
