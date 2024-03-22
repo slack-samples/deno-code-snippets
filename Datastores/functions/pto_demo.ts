@@ -18,7 +18,7 @@ export const def = DefineFunction({
 export default SlackFunction(def, async ({ inputs, client }) => {
   const offset = (await client.users.info({
     user: inputs.user_id,
-  })).user?.ts_offset || 0;
+  })).user?.tz_offset || 0;
 
   const {
     items: allItems,
@@ -27,14 +27,14 @@ export default SlackFunction(def, async ({ inputs, client }) => {
   let cursor = response_metadata?.next_cursor;
   while (cursor) {
     const {
-      paginationItems,
+      items,
       response_metadata,
-    } = await client.apps.datastore.query({ datastore: PTO.name });
-    allItems.push(paginationItems);
+    } = await client.apps.datastore.query({ datastore: PTO.name, cursor });
+    allItems.push(...items);
     cursor = response_metadata?.next_cursor;
   }
   const blocksToDisplayPTOs: any[] = [];
-  for (const item of allItems) {
+  allItems.forEach((item) => {
     const startAt = new Date(item.start_at * 1000);
     startAt.setDate(startAt.getDate() - 1);
     const from = toDate(offset, startAt);
@@ -49,7 +49,7 @@ export default SlackFunction(def, async ({ inputs, client }) => {
         "text": `<@${item.user_id}> ${from} - ${to} ${note}`,
       },
     });
-  }
+  });
   if (blocksToDisplayPTOs.length > 0) {
     blocksToDisplayPTOs.push({ "type": "divider" });
   }
@@ -112,7 +112,7 @@ export default SlackFunction(def, async ({ inputs, client }) => {
     ["pto-submission"],
     async ({ view, inputs, client }) => {
       const offset =
-        (await client.users.info({ user: inputs.user_id })).user?.ts_offset ||
+        (await client.users.info({ user: inputs.user_id })).user?.tz_offset ||
         0;
       const userId = inputs.user_id;
       const creation = await client.apps.datastore.put({
@@ -131,10 +131,10 @@ export default SlackFunction(def, async ({ inputs, client }) => {
           ),
         },
       });
-      console.log(
-        `Failed to create a data row: ${JSON.stringify(creation, null, 2)}`,
-      );
-      if (creation.error) {
+      if (!creation.ok) {
+        console.log(
+          `Failed to create a data row: ${JSON.stringify(creation, null, 2)}`,
+        );
         return { error: creation.error };
       }
       return {
