@@ -24,7 +24,7 @@ requires any of [the Slack paid plans](https://slack.com/pricing).
 
 To use this template, you first need to install and configure the Slack CLI.
 Step-by-step instructions can be found in our
-[Quickstart Guide](https://api.slack.com/future/quickstart).
+[Quickstart Guide](https://api.slack.com/automation/quickstart).
 
 ### Clone the Sample App
 
@@ -44,12 +44,12 @@ This app consists of a number of sample apps. Go over the list of sub-apps below
 and start with any of them:
 
 - [Messaging](./Messaging/): Post a channel message via the built-in
-  [`SendMessage`](https://api.slack.com/future/functions#send-message),
-  [`SendEphemeralMessage`](https://api.slack.com/future/functions#send-ephemeral-message),
-  and [`SendDm`](https://api.slack.com/future/functions#send-direct-message)
+  [`SendMessage`](https://api.slack.com/reference/functions/send_message),
+  [`SendEphemeralMessage`](https://api.slack.com/reference/functions/send_ephemeral_message),
+  and [`SendDm`](https://api.slack.com/reference/functions/send_dm)
   functions
 - [Built-in Forms](./Built-in_Forms/): Open a modal dialog using the built-in
-  [`OpenForm`](https://api.slack.com/future/functions#open-a-form)
+  [`OpenForm`](https://api.slack.com/reference/functions/open_form)
 - [Canvases](./Canvases/): Use canvas via the built-in
   [`CopyCanvas`](https://api.slack.com/reference/functions/canvas_copy),
   [`CreateCanvas`](https://api.slack.com/reference/functions/canvas_create),
@@ -77,9 +77,9 @@ The following ones may be a little bit advanced:
 
 To learn more about developing with the CLI, you can visit the following guides:
 
-- [Creating a new app with the CLI](https://api.slack.com/future/create)
-- [Configuring your app](https://api.slack.com/future/manifest)
-- [Developing locally](https://api.slack.com/future/run)
+- [Creating a new app with the CLI](https://api.slack.com/automation/create)
+- [Configuring your app](https://api.slack.com/automation/manifest)
+- [Developing locally](https://api.slack.com/automation/run)
 
 To view all documentation and guides available, visit the
-[Overview page](https://api.slack.com/future/overview).
+[Overview page](https://api.slack.com/automation/overview).

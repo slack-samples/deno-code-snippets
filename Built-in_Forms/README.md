@@ -17,11 +17,11 @@ ephemeral message.
 
 ### Create a Link Trigger
 
-[Triggers](https://api.slack.com/future/triggers) are what cause workflows to
-run. These triggers can be invoked by a user or automatically as a response to
-an event within Slack.
+[Triggers](https://api.slack.com/automation/triggers) are what cause workflows
+to run. These triggers can be invoked by a user or automatically as a response
+to an event within Slack.
 
-A [link trigger](https://api.slack.com/future/triggers/link) is a type of
+A [link trigger](https://api.slack.com/automation/triggers/link) is a type of
 trigger that generates a **Shortcut URL**, which, when posted in a channel or
 added as a bookmark, becomes a link. When clicked, the link trigger will run the
 associated workflow.
@@ -92,7 +92,7 @@ just as it did when developing locally.
 
 ### `manifest.ts`
 
-The [app manifest](https://api.slack.com/future/manifest) contains the app's
+The [app manifest](https://api.slack.com/automation/manifest) contains the app's
 configuration. This file defines attributes like app name and description.
 
 ### `slack.json`
@@ -102,24 +102,24 @@ script hooks that are executed by the CLI and implemented by the SDK.
 
 ### `Built-in_Forms/functions`
 
-[Functions](https://api.slack.com/future/functions) are reusable building blocks
-of automation that accept inputs, perform calculations, and provide outputs.
-Functions can be used independently or as steps in workflows.
+[Functions](https://api.slack.com/automation/functions) are reusable building
+blocks of automation that accept inputs, perform calculations, and provide
+outputs. Functions can be used independently or as steps in workflows.
 
 ### `Built-in_Forms/workflows`
 
-A [workflow](https://api.slack.com/future/workflows) is a set of steps that are
-executed in order. Each step in a workflow is a function.
+A [workflow](https://api.slack.com/automation/workflows) is a set of steps that
+are executed in order. Each step in a workflow is a function.
 
 Workflows can be configured to run without user input, or they can collect
-inputs by beginning with a [form](https://api.slack.com/future/forms) before
+inputs by beginning with a [form](https://api.slack.com/automation/forms) before
 continuing to the next step.
 
 ### `Built-in_Forms/triggers`
 
-[Triggers](https://api.slack.com/future/triggers) determine when workflows are
-executed. A trigger file describes a scenario in which a workflow should be run,
-such as a user pressing a button or when a specific event occurs.
+[Triggers](https://api.slack.com/automation/triggers) determine when workflows
+are executed. A trigger file describes a scenario in which a workflow should be
+run, such as a user pressing a button or when a specific event occurs.
 
 ## What's Next?
 

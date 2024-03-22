@@ -7,7 +7,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  * - "chat:write"
  * - "chat:write.public"
  *
- * To learn more on workflows, read https://api.slack.com/future/workflows
+ * To learn more on workflows, read https://api.slack.com/automation/workflows
  */
 const workflow = DefineWorkflow({
   callback_id: "channel-message-workflow",

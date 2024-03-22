@@ -4,7 +4,7 @@ import workflow from "../workflows/do_nothing.ts";
 
 /**
  * This trigger starts the workflow at specific time intervals.
- * Learn more at https://api.slack.com/future/triggers/scheduled
+ * Learn more at https://api.slack.com/automation/triggers/scheduled
  */
 const trigger: Trigger<typeof workflow.definition> = {
   type: TriggerTypes.Scheduled,

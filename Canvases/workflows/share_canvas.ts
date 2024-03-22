@@ -19,7 +19,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  *     },
  *   },
  * Learn more about the update canvas content slack function: https://api.slack.com/reference/functions/share_canvas
- * To learn more on workflows, read https://api.slack.com/future/workflows
+ * To learn more on workflows, read https://api.slack.com/automation/workflows
  */
 const workflow = DefineWorkflow({
   callback_id: "canvas-share-workflow",

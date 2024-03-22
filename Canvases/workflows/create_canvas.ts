@@ -7,7 +7,7 @@ import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
  * - "canvases:write"
  *
  * Learn more about the create canvas slack function: https://api.slack.com/reference/functions/canvas_create
- * To learn more on workflows, read https://api.slack.com/future/workflows
+ * To learn more on workflows, read https://api.slack.com/automation/workflows
  */
 const workflow = DefineWorkflow({
   callback_id: "canvas-create-workflow",
