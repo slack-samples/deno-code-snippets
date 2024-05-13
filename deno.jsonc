@@ -3,7 +3,6 @@
   "fmt": {
     "include": [
       "README.md",
-      "**/README.md",
       "**/datastores",
       "**/external_auth",
       "**/functions",
