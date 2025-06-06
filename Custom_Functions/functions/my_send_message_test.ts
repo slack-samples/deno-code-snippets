@@ -1,20 +1,28 @@
-import * as mf from "mock-fetch/mod.ts";
+import {stub} from "@std/testing/mock";
 import { SlackFunctionTester } from "deno-slack-sdk/mod.ts";
-import { assertEquals } from "std/testing/asserts.ts";
+import { assertEquals } from "@std/assert";
 import handler from "./my_send_message.ts";
-
-// After this method call,
-// all `globalThis.fetch` calls will be replaced with mock behaviors
-mf.install();
 
 // Utility for generating valid arguments
 const { createContext } = SlackFunctionTester("my-function");
 
 Deno.test("Send a message successfully", async () => {
-  mf.mock("POST@/api/chat.postMessage", () => {
-    const body = JSON.stringify({ ok: true, ts: "1111.2222" });
-    return new Response(body, { status: 200 });
-  });
+  using _stubFetch = stub(
+    globalThis,
+    "fetch",
+    (url: string | URL | Request, options?: RequestInit) => {
+      const request = url instanceof Request ? url : new Request(url, options);
+
+      assertEquals(request.method, "POST");
+      assertEquals(request.url, "https://slack.com/api/chat.postMessage");
+
+      const body = JSON.stringify({ ok: true, ts: "1111.2222" });
+      return Promise.resolve(
+        new Response(body, { status: 200 })
+      );
+    }
+  );
+
   const inputs = { channel_id: "C111", message: "Hi there!" };
   const token = "xoxb-valid";
   const env = { LOG_LEVEL: "INFO" };
@@ -26,16 +34,25 @@ Deno.test("Send a message successfully", async () => {
 });
 
 Deno.test("Fail to send a message with invalid token", async () => {
-  mf.mock("POST@/api/chat.postMessage", (args) => {
-    const authHeader = args.headers.get("Authorization");
+  using _stubFetch = stub(
+    globalThis,
+    "fetch",
+    (url: string | URL | Request, options?: RequestInit) => {
+      const request = url instanceof Request ? url : new Request(url, options);
+
+      assertEquals(request.method, "POST");
+      assertEquals(request.url, "https://slack.com/api/chat.postMessage");
+      const authHeader = request.headers.get("Authorization");
     if (authHeader !== "Bearer xoxb-valid") {
       // invalid token pattern
       const body = JSON.stringify({ ok: false, error: "invalid_auth" });
-      return new Response(body, { status: 200 });
+      return Promise.resolve(new Response(body, { status: 200 }));
     }
     const body = JSON.stringify({ ok: true, ts: "1111.2222" });
-    return new Response(body, { status: 200 });
-  });
+    return Promise.resolve(new Response(body, { status: 200 }));
+  }
+  );
+
   const inputs = { channel_id: "C111", message: "Hi there!" };
   const token = "xoxb-invalid";
   const env = { LOG_LEVEL: "INFO" };
@@ -47,8 +64,16 @@ Deno.test("Fail to send a message with invalid token", async () => {
 });
 
 Deno.test("Fail to send a message to an unknown channel", async () => {
-  mf.mock("POST@/api/chat.postMessage", async (args) => {
-    const params = await args.formData();
+  using _stubFetch = stub(
+    globalThis,
+    "fetch",
+    async (url: string | URL | Request, options?: RequestInit) => {
+      const request = url instanceof Request ? url : new Request(url, options);
+
+      assertEquals(request.method, "POST");
+      assertEquals(request.url, "https://slack.com/api/chat.postMessage");
+
+      const params = await request.formData();
     if (params.get("channel") !== "C111") {
       // unknown channel
       const body = JSON.stringify({ ok: false, error: "channel_not_found" });
@@ -56,7 +81,9 @@ Deno.test("Fail to send a message to an unknown channel", async () => {
     }
     const body = JSON.stringify({ ok: true, ts: "1111.2222" });
     return new Response(body, { status: 200 });
-  });
+    }
+  );
+
   const inputs = { channel_id: "D111", message: "Hi there!" };
   const token = "xoxb-valid";
   const env = { LOG_LEVEL: "INFO" };
