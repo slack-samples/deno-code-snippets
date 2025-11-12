@@ -30,6 +30,7 @@ const gif = workflow.addStep(
   {
     search_term: form.outputs.fields.text,
     weirdness: "0",
+    rating: "g",
   },
 );
 
