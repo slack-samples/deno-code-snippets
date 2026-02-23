@@ -1,4 +1,4 @@
-import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow, Schema } from "@slack/sdk";
 
 const workflow = DefineWorkflow({
   callback_id: "reply-to-reaction-workflow",

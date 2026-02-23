@@ -1,5 +1,5 @@
-import { Trigger } from "deno-slack-sdk/types.ts";
-import { TriggerTypes } from "deno-slack-api/mod.ts";
+import { Trigger } from "@slack/sdk/types.ts";
+import { TriggerTypes } from "@slack/api";
 import workflow from "../workflows/do_nothing.ts";
 
 /**

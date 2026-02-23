@@ -1,4 +1,4 @@
-import { DefineWorkflow } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow } from "@slack/sdk";
 
 /**
  * This workflow does nothing, but you can confirm it was invoked by checking `slack activity -t` command outputs.
