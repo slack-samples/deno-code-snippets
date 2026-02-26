@@ -32,7 +32,7 @@
   },
   "imports": {
     "@slack/api": "jsr:@slack/api@2.9.0",
-    "@slack/sdk": "jsr:@slack/sdk@2.15.2-dev.1",
+    "@slack/sdk": "jsr:@slack/sdk@2.15.2",
 
     "deno-slack-hub/": "https://deno.land/x/deno_slack_hub@3.3.0/",
     "@std/assert": "jsr:@std/assert@^1.0.15",
