@@ -1,4 +1,4 @@
-import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow, Schema } from "@slack/sdk";
 
 /**
  * This workflow demonstrates how to create a canvas with content and share it with channels and user.

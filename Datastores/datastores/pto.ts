@@ -1,4 +1,4 @@
-import { DefineDatastore, Schema } from "deno-slack-sdk/mod.ts";
+import { DefineDatastore, Schema } from "@slack/sdk";
 
 // Refer to https://api.slack.com/automation/datastores for details
 const datastore = DefineDatastore({

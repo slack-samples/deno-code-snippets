@@ -1,4 +1,4 @@
-import { DefineWorkflow, Schema } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow, Schema } from "@slack/sdk";
 import { def as SendBlockKitMessage } from "../functions/send_block_kit_message.ts";
 
 const workflow = DefineWorkflow({

@@ -1,4 +1,4 @@
-import { DefineFunction, SlackFunction } from "deno-slack-sdk/mod.ts";
+import { DefineFunction, SlackFunction } from "@slack/sdk";
 import Tasks from "../datastores/tasks.ts";
 
 export const def = DefineFunction({

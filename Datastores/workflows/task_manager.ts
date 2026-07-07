@@ -1,4 +1,4 @@
-import { DefineWorkflow } from "deno-slack-sdk/mod.ts";
+import { DefineWorkflow } from "@slack/sdk";
 import { def as TasksDemo } from "../functions/tasks_demo.ts";
 
 const workflow = DefineWorkflow({
