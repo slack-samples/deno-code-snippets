@@ -1,4 +1,4 @@
-import { Trigger } from "deno-slack-sdk/types.ts";
+import { Trigger } from "@slack/sdk/types.ts";
 import workflow from "../workflows/block_kit_modal_demo.ts";
 
 /**

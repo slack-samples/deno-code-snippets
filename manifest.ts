@@ -1,4 +1,4 @@
-import { Manifest } from "deno-slack-sdk/mod.ts";
+import { Manifest } from "@slack/sdk";
 
 // Messaging/*
 import ChannelMessageWorkflow from "./Messaging/workflows/channel_message.ts";

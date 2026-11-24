@@ -1,6 +1,6 @@
 import {stub} from "@std/testing/mock";
 import { assertEquals } from "@std/assert";
-import { SlackFunctionTester } from "deno-slack-sdk/mod.ts";
+import { SlackFunctionTester } from "@slack/sdk";
 import handler from "./httpbin_get.ts";
 
 const { createContext } = SlackFunctionTester("my-function");
